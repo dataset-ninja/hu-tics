@@ -14,8 +14,8 @@ from dataset_tools.templates import (
 # * Before uploading to instance #
 ##################################
 PROJECT_NAME: str = "HuTics"
-PROJECT_NAME_FULL: str = "HuTics Dataset"
-HIDE_DATASET = True  # set False when 100% sure about repo quality
+PROJECT_NAME_FULL: str = "HuTics: Human Deictic Gestures Dataset"
+HIDE_DATASET = False  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
@@ -30,7 +30,6 @@ CV_TASKS: List[CVTask] = [
     CVTask.InstanceSegmentation(),
     CVTask.SemanticSegmentation(),
     CVTask.ObjectDetection(),
-    CVTask.Identification(),
 ]
 ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.InstanceSegmentation()]
 
@@ -79,7 +78,7 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://www.u-tokyo.ac.jp/e
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
-    "taxonomy": [
+    "4 taxonomy categories": [
         "pointing",
         "present",
         "touch",

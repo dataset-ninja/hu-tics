@@ -1,5 +1,4 @@
-The authors created **HuTics Dataset**, consisting of 2040 images collected from 170 people that include various deictic gestures and objects with segmentation
-mask annotations. The technical evaluation shows that their object highlights can achieve the accuracy of 0.718 (mean Intersection over Union; 𝑚𝐼𝑜𝑈) and can run at 28.3 fps. It covers four kinds of deictic gestures to objects: exhibiting, pointing, presenting and touching.
+The authors created **HuTics: Human Deictic Gestures Dataset**, consisting of 2040 images collected from 170 people that include various deictic gestures and objects with segmentation mask annotations. The technical evaluation shows that their object highlights can achieve the accuracy of 0.718 (mean Intersection over Union; 𝑚𝐼𝑜𝑈) and can run at 28.3 fps. It covers four kinds of deictic gestures to objects: ***exhibit***, ***pointing***, ***present*** and ***touch***.
 
 ## Motivation
 
@@ -8,6 +7,16 @@ Interactive Machine Teaching (IMT) endeavors to enhance users' teaching involvem
 Despite the minimal effort required to provide training samples, prior research has indicated that ML models trained via V-IMT systems might identify objects based on irrelevant visual features. For instance, during a demonstration of a book, the model may focus on background visual elements. Failure to rectify this issue could lead to diminished model performance in real-world applications. Hence, users should be empowered to specify the image portions that the model must prioritize for accurate classification. One strategy to address this is through object annotations, which can be incorporated into the model's training process.
 
 Advancements in annotation tools streamline user tasks, simplifying interactions to clicks or sketches. Despite their reduced workload, existing annotation tools are not optimized for V-IMT systems, necessitating users to conduct annotations post hoc. This undermines the overall user experience with V-IMT systems. Consequently, exploring annotation methods more seamlessly integrated into V-IMT systems is crucial.
+
+The backend model responsible for identifying object highlights requires training data illustrating how individuals gesture towards objects in front of a camera. Among the available datasets focusing on human-object interactions, [TEgO](https://dl.acm.org/doi/10.1145/3290605.3300566) stands out as the most suitable for the authors' task. TEgO comprises 5758 labeled egocentric images capturing hand-object interactions. Each image includes a hand segmentation mask and precise point-level annotations indicating the object's location. However, these annotations alone do not fulfill the requirement for object segmentation. To address this, an attempt was made to infer the segmentation mask of the object using a click-based interactive segmentation approach. Subsequently, all generated results underwent manual inspection to eliminate data samples where the inferred segmentation masks proved to be significantly inaccurate. This process led to the creation of a custom dataset, named TEgO-Syn, comprising 5232 instances with automatically synthesized object segmentation masks.
+
+The authors observations showed that the model was not robust enough. They then summarized three main reasons why TEgO still cannot fit their target task:
+
+* **A limited set of gestures.** All data in TEgO were collected from two participants, which is insufficient to cover how different people interact with the object using gestures.
+* **A limited set of objects.** TEgO-Syn includes 5232 images of 19 objects. Training on a small set of objects repeatedly enables the model to over-fit the features of these specific objects, which is harmful to our target task, i.e., object-agnostic segmentation.
+* **Egocentric images.** The images in the TEgO dataset are taken from the egocentric view. Our system uses a front-facing camera, which is a common configuration in V-IMT.
+
+
 
 ## Dataset description
 
