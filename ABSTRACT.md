@@ -16,7 +16,7 @@ mask annotations. They leveraged crowd-workers from Amazon Mechanical Turk to en
 
 On average, crowd-workers dedicated 15 minutes per task, receiving $2 for their participation. Additionally, the authors engaged five individuals through a local crowdsourcing platform to annotate object segmentation masks on the gathered images. Each annotation worker labeled approximately 408 images and received an average compensation of $78 in local currency. [AnnoFab](https://annofab.com/), an online polygon-based tool, facilitated the annotation process for delineating segmentation masks.
 
-<img src="https://github.com/dataset-ninja/hu-tics/assets/120389559/5d59496c-626c-4b86-9865-136911ca8670" alt="image" width="800">
+<img src="https://github.com/dataset-ninja/hu-tics/assets/120389559/5d59496c-626c-4b86-9865-136911ca8670" alt="image" width="1000">
 
 <span style="font-size: smaller; font-style: italic;">Example images in HuTics dataset. HuTics covers four kinds of deictic gestures to objects: exhibiting (top-left), pointing (top-right), presenting (bottom-left) and touching (bottom-right). The hands and objects of interest are highlighted in blue and green, respectively.</span>
 
