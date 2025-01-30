@@ -1,6 +1,6 @@
 Dataset **HuTics** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://www.dropbox.com/scl/fi/8baqkaa1lirqvp4h30g0q/hutics-DatasetNinja.tar?rlkey=8m91daycdcbe6131jn9yp4mom&dl=1)
+ [Download](https://assets.supervisely.com/remote/eyJsaW5rIjogImZzOi8vYXNzZXRzLzM1NTNfSHVUaWNzL2h1dGljcy1EYXRhc2V0TmluamEudGFyIiwgInNpZyI6ICIzU21EWGcxV1lTMUtlcnpSazJDWEFodk8rMHdvSmNTck1tOVk2ZUU3QmFrPSJ9)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
